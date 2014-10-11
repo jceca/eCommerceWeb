@@ -11,12 +11,12 @@ angular
         $stateProvider
             .state('home', {
                 url: '/',
-                templateUrl: 'view/mainPage.html',
+                templateUrl: 'views/mainPage.html',
                 controller: 'mainCtrl'
             })
             .state('about', {
                 url:'/about',
-                templateUrl: 'view/about.html',
+                templateUrl: 'views/about.html',
                 controller: 'aboutCtrl'
             })
     }]);
@@ -28,19 +28,19 @@ angular
     .config(function($routeProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: 'view/mainPage.html',
+                templateUrl: 'views/mainPage.html',
                 controller: 'mainCtrl'
             })
             .when('/about', {
-                templateUrl: 'view/about.html',
+                templateUrl: 'views/about.html',
                 controller: 'aboutCtrl'
             })
             .when('/units', {
-                templateUrl: 'view/units.html',
+                templateUrl: 'views/units.html',
                 controller: 'unitsController'
             })
             .when('/units/:unitId', {
-                templateUrl: 'view/units.html',
+                templateUrl: 'views/units.html',
                 controller: 'unitsController'
             })
             .otherwise({

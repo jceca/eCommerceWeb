@@ -1,7 +1,6 @@
 /**
  * Created by Javier on 11/10/2014.
  */
-
 angular.module('guide')
     .controller('mainCtrl', ['$scope', function ($scope) {
         $scope.model = {
