@@ -7,6 +7,7 @@
     <!-- Custom styles for this template -->
     <link href="css/navbar-fixed-top.css" rel="stylesheet">
     <link href="css/jumbotron-fixed.css" rel="stylesheet">
+    <link href="css/dropdown-fixed.css" rel="stylesheet">
 
 
 </head>
@@ -14,7 +15,7 @@
     <title>AngularJS Starter Guidebook</title>
     <nav>
         <!-- Fixed navbar -->
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -27,14 +28,17 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#/">Home</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Temas <span class="caret"></span></a>
+                            <a href="#/units" class="dropdown-toggle" data-toggle="dropdown">Temas <span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="#/tema1">Tema 1 | Introducción al eCommerce</a></li>
+                                <li><a href="#/units/unit1">Tema 1 | Introducción al eCommerce</a></li>
+                                <li><a href="#/units/unit2">Tema 2 | ...</a></li>
+                                <li><a href="#/units/unit3">Tema 3 | ...</a></li>
+                                <li><a href="#/units/unit4">Tema 4 | ...</a></li>
                             </ul>
                         </li>
-                        <li><a href="#contact">Contacto</a></li>
+                        <li><a href="#/about">Contacto</a></li>
                         </li>
                     </ul>
                 </div>
@@ -46,18 +50,19 @@
 
 <body>
 
+<div ng-view></div>
 
-<div id="main" ng-controller="mainController">
-    <!-- Aqui inyectamos las vistas -->
-    <div ng-view></div>
-</div>
-
+<!--AngularJS-->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.min.js"></script>
+
+<!--UIRouter-->
+<script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 <script src='Guidebook.js'></script>
-
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src='controllers/mainCtrl.js'></script>
 </body>
 </html>
