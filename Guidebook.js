@@ -39,8 +39,8 @@ angular
                 templateUrl: 'views/units.html',
                 controller: 'unitsController'
             })
-            .when('/units/:unitId', {
-                templateUrl: 'views/units.html',
+            .when('/units/unit1', {
+                templateUrl: 'views/units/unit1.html',
                 controller: 'unitsController'
             })
             .otherwise({
