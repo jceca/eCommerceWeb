@@ -1,19 +1,20 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8">
-                <div id="map_canvas"></div>
+            <div class="jumbotronAbout">
+
+            </div>
         </div>
         <div class="col-md-4">
             <address>
-                <strong>Twitter, Inc.</strong><br>
-                795 Folsom Ave, Suite 600<br>
-                San Francisco, CA 94107<br>
-                <abbr title="Phone">P:</abbr> (123) 456-7890
+                <strong>Comercio Electrónico</strong><br>
+                Escuela Superios de Informática, UCLM<br>
+                Ciudad Real, Ciudad Real<br>
             </address>
 
             <address>
-                <strong>Full Name</strong><br>
-                <a href="mailto:#">first.last@example.com</a>
+                <strong>Javier García Ceca</strong><br>
+                <a class="glyphicon glyphicon-envelope" href="mailto:#"> javier.gceca@gmail.com</a>
             </address>
         </div>
 
@@ -38,5 +39,17 @@
         var map = new google.maps.Map(mapCanvas, mapOptions)
     }
     google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<script type="javascript">
+    var jumboHeight = $('.jumbotronAbout').outerHeight();
+    function parallax(){
+        var scrolled = $(window).scrollTop();
+        $('.bg').css('height', (jumboHeight-scrolled) + 'px');
+    }
+
+    $(window).scroll(function(e){
+        parallax();
+    });
 </script>
 </head>
