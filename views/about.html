@@ -1,12 +1,22 @@
 <div class="container">
-    <div>
-        <form>
-            <input type="text" name="firstName" ng-model="myForm.firstName"> First name <br/>
-            <input type="text" name="lastName"  ng-model="myForm.lastName"> Last name <br/>
-        </form>
-
-        <div>
-            {{myForm.firstName}} {{myForm.lastName}}
+    <form role="form" name="forma">
+        <div class="form-group" ng-class="{'has-error': forma.nombreU.$invalid, 'has-success': forma.nombreU.$valid}">
+            <label for="inputNombre">Nombre</label>
+            <input id="inputNombre" type="text" class="form-control" placeholder="Nombre" name="nombreU" ng-model="usuario.nombre" required>
         </div>
-    </div>
+        <div class="form-group" ng-class="{'has-error': forma.emailU.$invalid, 'has-success': forma.emailU.$valid}">
+            <label for="inputEmail">Email</label>
+            <input id="inputEmail" type="email" class="form-control" placeholder="email" name="emailU" ng-model="usuario.email" required>
+            <div ng-show="forma.emailU.$dirty && forma.emailU.$invalid">
+                <p class="help-block text-danger" ng-show="forma.emailU.$error.required">Campo obligatorio</p>
+                <p class="help-block text-danger" ng-show="forma.emailU.$error.email">Email invalido</p>
+            </div>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" name="aceptoU" ng-model="usuario.acepto" required> Acepto.
+            </label>
+        </div>
+        <button class="btn btn-success" ng-disabled="forma.$invalid">Registrar</button>
+    </form>
 </div>
