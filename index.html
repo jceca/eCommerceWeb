@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css">
     <!-- Custom styles for this template -->
     <link href="css/navbar-fixed-top.css" rel="stylesheet">
     <link href="css/jumbotron-fixed.css" rel="stylesheet">
     <link href="css/dropdown-fixed.css" rel="stylesheet">
-
+    <link href="css/sticky-footer.css" rel="stylesheet">
 
 </head>
 <head>
@@ -52,6 +52,12 @@
 
 <div ng-view></div>
 
+<div class="footer">
+    <div class="container">
+        <p class="text-muted">Comercio Electrónico - UCLM</p>
+    </div>
+</div>
+
 <!--AngularJS-->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.min.js"></script>
@@ -62,7 +68,9 @@
 <!--UIRouter-->
 <script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
 
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 <!--Routing-->

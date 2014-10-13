@@ -43,7 +43,4 @@ angular
                 templateUrl: 'views/units/unit1.html',
                 controller: 'unitsController'
             })
-            .otherwise({
-                redirectTo: '/'
-            })
     });
